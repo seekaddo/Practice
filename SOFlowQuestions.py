@@ -78,9 +78,12 @@ Suppose an amount of 1,500 is deposited in a bank paying an annual interest rate
 Then the balance after 6 years is found by using the formula above, with P = 1500, i = 4.3% = 0.043, n = 4, and t = 6:
 
 """
-def Compound_Interest(p, i, n, t):
+
+
+def compound_interest(p, i, n, t):
     finance = p * (1 + (i / n)) ** (n * t)
     principal_sum = finance - p
     print("Principal sum is ", round(principal_sum, 2))
-Compound_Interest(1500, 0.043, 4, 6)
 
+
+compound_interest(1500, 0.043, 4, 6)
