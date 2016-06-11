@@ -2,6 +2,7 @@
 How do i find the highest value and swap it within the end value in an array in python
 
 """
+import collections
 
 array = [1, 3, 4, 12, 4, 7]
 
@@ -87,3 +88,41 @@ def compound_interest(p, i, n, t):
 
 
 compound_interest(1500, 0.043, 4, 6)
+
+"""
+finding VOWELS in given words
+[x for x in t if x not in s]
+"""
+VOWELS = "aeiou"
+
+
+def find_vowels(words):
+    print(sum([x in VOWELS for x in words], ))
+
+
+find_vowels("Michael")
+word_list = ['big', 'cats', 'like', 'really']
+
+
+def count_vowel(word):
+    vowels = "aeiou"
+    for v in vowels:
+        count = 0
+        for x in word:
+            if v in x:
+                count += 1
+        print(v, "occurs ", count, " times")
+
+
+count_vowel(word_list)
+
+
+def count_vowels2(word):
+    print("The the second method->>>>>>>>>>>>>>here\n")
+    vowels = "aeiou"
+    letters = collections.Counter("".join(word))
+    for letter in vowels:
+        print(letter, " occurs", letters.get(letter, 0), " times")
+
+
+count_vowels2(word_list)
